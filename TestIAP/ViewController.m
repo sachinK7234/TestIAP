@@ -17,6 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLocale *locale = [NSLocale currentLocale];
+    NSString *countryCode = [locale objectForKey: NSLocaleCountryCode];
+    NSLog(@"countryCode:%@", countryCode);
+    NSLog(@"availableLocaleIdentifiers: %@", [NSLocale availableLocaleIdentifiers]);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
